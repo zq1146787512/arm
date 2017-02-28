@@ -13,7 +13,9 @@ import javax.swing.JOptionPane;
 
 import com.school.ui.Check_UI;
 import com.school.ui.ShowFrame;
-
+/**
+ *播放程序定时器
+ */
 public class PlayPic extends TimerTask {
 
 	/** 当前要画的图片 */
