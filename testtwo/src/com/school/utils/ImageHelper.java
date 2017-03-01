@@ -16,9 +16,9 @@ import javax.imageio.stream.ImageInputStream;
 public class ImageHelper {
 	
 	/*
-	 * 图片剪裁部分
+	 * 图片剪裁部分test测试剪切图片
 	 */
-	 public static void cutImage1(String src ,int k,String dest) throws IOException{ 
+	 public static void cutImage(String src ,int k,String dest) throws IOException{ 
 		 Iterator iterator = ImageIO.getImageReadersByFormatName("jpg"); 
          ImageReader reader = (ImageReader)iterator.next(); 
          InputStream in=new FileInputStream(src);
