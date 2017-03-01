@@ -1,6 +1,7 @@
 package com.school.method;
 
 import java.awt.event.MouseEvent;
+import java.util.Timer;
 
 public class MyMouseListener extends java.awt.event.MouseAdapter {
 	private boolean flag = false;// 用来判断是否已经执行双击事件
@@ -19,7 +20,7 @@ public class MyMouseListener extends java.awt.event.MouseAdapter {
 		}
 
 		// 定义定时器
-		java.util.Timer timer = new java.util.Timer();
+		 Timer timer = new Timer();
 
 		// 定时器开始执行,延时0.2秒后确定是否执行单击事件
 		timer.schedule(new java.util.TimerTask() {

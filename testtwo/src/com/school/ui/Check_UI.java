@@ -469,13 +469,7 @@ public class Check_UI {
 
 				jButton_determin.setEnabled(false);
 
-				// gp1 = new GetParam(root, paiZhao, riQi, s1, s2, s3, s4,
-				// (String) jComboBox_4.getSelectedItem(),
-				// (String) jComboBox_5.getSelectedItem(),
-				// (String) jComboBox_6.getSelectedItem(),
-				// (String) jComboBox_7.getSelectedItem(),
-				// (String) jComboBox_8.getSelectedItem(),
-				// (String) jComboBox_9.getSelectedItem());
+				
 				ExportThread et_1 = new ExportThread(gp1);
 				Thread t1 = new Thread(et_1);
 				t1.start();

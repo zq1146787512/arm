@@ -91,7 +91,7 @@ public class ShowFrame {
 	private static JLabel jtexttime4;
 
 	private PlayPic pp;
-	private int delay = 500;
+	private int delay = 300;
 	private static Timer timer = null;
 	private static boolean flag1 = true;
 	private static boolean flag2 = true;
@@ -204,7 +204,7 @@ public class ShowFrame {
 		bt12.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				pp.daochu1();// 调用导出方法；
+				pp.daochu(1);// 调用导出方法；
 			}
 		});
 
@@ -282,7 +282,7 @@ public class ShowFrame {
 		bt22.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				pp.daochu2();// 调用导出方法；
+				pp.daochu(2);// 调用导出方法；
 			}
 		});
 
@@ -355,7 +355,7 @@ public class ShowFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				pp.daochu3();// 调用导出方法；
+				pp.daochu(3);// 调用导出方法；
 			}
 		});
 
@@ -430,7 +430,7 @@ public class ShowFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				pp.daochu4();// 调用displaypanel4中的导出方法；
+				pp.daochu(4);// 调用displaypanel4中的导出方法；
 			}
 		});
 
@@ -499,10 +499,7 @@ public class ShowFrame {
 			public void actionPerformed(ActionEvent e) {
 				bt2b.setVisible(false);
 				bt2a.setVisible(true);
-				pp.setList1(TestCheck.getList1());
-				pp.setList2(TestCheck.getList2());
-				pp.setList3(TestCheck.getList3());
-				pp.setList4(TestCheck.getList4());
+				pp.setList1(TestCheck.getList1());				
 				pp.setStop(false);
 
 			}
@@ -712,7 +709,7 @@ public class ShowFrame {
 			timer.schedule(pp, 1000, delay);
 
 		} else {
-			JOptionPane.showMessageDialog(jf.getContentPane(), "请输入大于300的值",
+			JOptionPane.showMessageDialog(jf.getContentPane(), "请输入大于100的值",
 					"系统信息", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
@@ -866,8 +863,8 @@ public class ShowFrame {
 		ShowFrame.jtexttime4 = jtexttime4;
 	}
 
-	// public static void main(String[] args) {
-	// new ShowFrame().initcomponent();
-	// }
+//	 public static void main(String[] args) {
+//	 new ShowFrame().initcomponent();
+//	 }
 
 }
