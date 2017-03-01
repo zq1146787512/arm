@@ -48,10 +48,15 @@ public class PlayPic extends TimerTask {
 				// 判空且满足当前循环值小于当前list的大小时才能绘制图片
 				if (list1 != null && list1.size() > 0 && k < list1.size()) {
 					try {
-						currentImage1 = ImageHelper.cutImage1(list1.get(k), 1);
-						currentImage2 = ImageHelper.cutImage1(list1.get(k), 2);
-						currentImage3 = ImageHelper.cutImage1(list1.get(k), 3);
-						currentImage4 = ImageHelper.cutImage1(list1.get(k), 4);
+//						currentImage1 = ImageHelper.cutImage1(list1.get(k), 1);//调用四次切割函数，消耗CPU资源过多
+//						currentImage2 = ImageHelper.cutImage1(list1.get(k), 2);
+//						currentImage3 = ImageHelper.cutImage1(list1.get(k), 3);
+//						currentImage4 = ImageHelper.cutImage1(list1.get(k), 4);
+						List<BufferedImage> list=ImageHelper.cutImage(list1.get(k));//调用一次切割函数，减少CPU处理
+						currentImage1 = list.get(0);
+						currentImage2 = list.get(1);
+						currentImage3 = list.get(2);
+						currentImage4 = list.get(3);
 					} catch (IOException e) {
 						
 						e.printStackTrace();
@@ -85,10 +90,11 @@ public class PlayPic extends TimerTask {
 					// 判空且满足当前循环值小于当前list的大小时才能绘制图片
 					if (list1 != null && list1.size() > 0 && k < list1.size()) {
 						try {
-							currentImage1 = ImageHelper.cutImage1(list1.get(k), 1);
-							currentImage2 = ImageHelper.cutImage1(list1.get(k), 2);
-							currentImage3 = ImageHelper.cutImage1(list1.get(k), 3);
-							currentImage4 = ImageHelper.cutImage1(list1.get(k), 4);
+							List<BufferedImage> list=ImageHelper.cutImage(list1.get(k));
+							currentImage1 = list.get(0);
+							currentImage2 = list.get(1);
+							currentImage3 = list.get(2);
+							currentImage4 = list.get(3);
 						} catch (IOException e) {	
 							e.printStackTrace();
 						}
@@ -121,10 +127,11 @@ public class PlayPic extends TimerTask {
 					// 判空且满足当前循环值小于当前list的大小时才能绘制图片
 					if (list1 != null && list1.size() > 0 && k < list1.size()) {
 						try {
-							currentImage1 = ImageHelper.cutImage1(list1.get(k), 1);
-							currentImage2 = ImageHelper.cutImage1(list1.get(k), 2);
-							currentImage3 = ImageHelper.cutImage1(list1.get(k), 3);
-							currentImage4 = ImageHelper.cutImage1(list1.get(k), 4);
+							List<BufferedImage> list=ImageHelper.cutImage(list1.get(k));
+							currentImage1 = list.get(0);
+							currentImage2 = list.get(1);
+							currentImage3 = list.get(2);
+							currentImage4 = list.get(3);
 						} catch (IOException e) {	
 							e.printStackTrace();
 						}
