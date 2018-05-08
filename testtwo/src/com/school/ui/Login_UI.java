@@ -86,6 +86,7 @@ public class Login_UI {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("zhang");
 		new Login_UI().init();
 	}
 }
